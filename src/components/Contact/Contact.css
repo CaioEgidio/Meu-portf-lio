@@ -1,0 +1,26 @@
+.contact__desc {
+  text-align: center;
+  margin-top: 10px;
+  color: var(--muted);
+}
+
+.contact__list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.contact__list li {
+  margin: 10px 0;
+}
+
+.contact__list a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contact__list a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,20 @@
+.edu__item {
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.edu__course {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--accent);
+}
+
+.edu__school {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.edu__date {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
