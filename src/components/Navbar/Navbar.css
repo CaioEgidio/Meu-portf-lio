@@ -15,7 +15,7 @@
   border-bottom: 1px solid rgba(255,255,255,.03);
 }
 
-.container{
+/*.container{
   width: min(1100px, 92vw);
   margin: 0 auto;
   display:flex;
@@ -23,6 +23,7 @@
   justify-content:space-between;
   padding: 16px 0;
 }
+*/
 
 .brand{
   color: var(--text);
@@ -60,4 +61,11 @@
   text-decoration:none;
   font-weight:700;
   border: 1px solid rgba(0,240,160,.18);
+}
+
+.navbar__inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
 }

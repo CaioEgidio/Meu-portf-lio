@@ -29,3 +29,15 @@
   color: var(--muted);
   line-height: 1.5;
 }
+
+@media (max-width: 768px) {
+  .experience .card {
+    text-align: center;
+  }
+
+  .exp__list {
+    text-align: left; /* lista pode ficar à esquerda pra legibilidade */
+    margin: 0 auto;
+    max-width: 80%;
+  }
+}

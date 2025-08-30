@@ -1,0 +1,64 @@
+:root {
+  --bg: #0b0b0b;
+  --surface: #131313;
+  --text: #eaeaea;
+  --muted: #b3b3b3;
+  --accent: #00f0a0;
+  --accent-2: #7bffcf;
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Corpo */
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Container padrão */
+.container {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+}
+
+/* Espaçamento das seções */
+.section {
+  padding: 64px 0;
+}
+
+/* Títulos */
+.section__title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 24px;
+  color: var(--text);
+}
+
+/* Cartões */
+.card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+}
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ==== Animações de scroll ==== */
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}

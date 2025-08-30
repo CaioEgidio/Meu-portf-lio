@@ -18,3 +18,14 @@
   font-size: 1.05rem;
   line-height: 1.6;
 }
+
+@media (max-width: 768px) {
+  .about__text {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .section__title {
+    text-align: center;
+  }
+}
