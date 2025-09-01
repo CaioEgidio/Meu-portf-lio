@@ -62,3 +62,90 @@ html {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* ==== Cards ==== */
+.card {
+  background: rgba(15, 15, 15, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,240,160,0.2);
+}
+
+/* ==== Botões ==== */
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  position: relative;
+  border: 1px solid rgba(255,255,255,0.3);
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: rgba(255,255,255,0.05);
+  box-shadow: 0 4px 12px rgba(0,240,160,0.25);
+  color: var(--accent);
+}
+
+/* ==== Botões com efeito 3D e neon ==== */
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  position: relative;
+  border: 1px solid rgba(255,255,255,0.3);
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  /* 🔥 sombra fixa (sempre visível, até no mobile) */
+  box-shadow: 0 4px 12px rgba(0, 240, 160, 0.15);
+}
+
+.btn:hover {
+  background: rgba(255,255,255,0.05);
+  box-shadow: 0 6px 16px rgba(0,240,160,0.35);
+  color: var(--accent);
+}
+
+/* 🔥 no toque (mobile) */
+.btn:active {
+  transform: scale(0.96);
+  box-shadow: 0 3px 6px rgba(0,240,160,0.4);
+}
+
+/* ==== Cards com efeito 3D ==== */
+.card {
+  background: rgba(15, 15, 15, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.6); /* 🔥 sombra fixa */
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,240,160,0.2);
+}
+
+
+.card:active {
+  transform: scale(0.98);
+  box-shadow: 0 8px 16px rgba(0,240,160,0.35);
+}

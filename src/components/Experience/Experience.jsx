@@ -8,7 +8,7 @@ const Experience = () => {
         <h2 className="section__title">Experiência Profissional</h2>
 
         <div className="exp__item card">
-          <h3 className="exp__role">Estagiário – Setor Financeiro</h3>
+          <h3 className="exp__role"> Setor Financeiro</h3>
           <p className="exp__company">Anestbaby Serviços Médicos Cia</p>
           <p className="exp__date">Maio 2023 – Julho 2024</p>
 
