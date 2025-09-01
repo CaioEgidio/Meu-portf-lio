@@ -114,17 +114,7 @@
   border: 6px solid rgba(11,11,11,1);
 }
 
-/* animated dashed ring using SVG stroke-dasharray */
-.avatar__ring{
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform-origin: center;
-  z-index: 1;
-  overflow: visible;
-}
+
 
 .avatar__ring circle{
   fill: none;

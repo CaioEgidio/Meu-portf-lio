@@ -4,23 +4,40 @@
   color: var(--muted);
 }
 
-.contact__list {
-  list-style: none;
-  padding: 0;
-  margin-top: 20px;
-  text-align: center;
+/* Remova os estilos antigos da lista e adicione estes */
+
+/* Container para os ícones */
+.contact__links {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espaçamento entre os ícones */
+  margin-top: 28px;
 }
 
-.contact__list li {
-  margin: 10px 0;
-}
-
-.contact__list a {
-  color: var(--accent);
-  font-weight: 600;
+/* Estilo de cada ícone-link */
+.contact__icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  color: var(--muted);
+  font-size: 1.4rem; /* Tamanho do ícone */
   text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-.contact__list a:hover {
-  text-decoration: underline;
+/* Efeito de hover para o brilho neon */
+.contact__icon-link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 0 15px rgba(0, 240, 160, 0.4);
+  transform: translateY(-4px);
+}
+
+/* Efeito ao clicar */
+.contact__icon-link:active {
+  transform: scale(0.95);
 }

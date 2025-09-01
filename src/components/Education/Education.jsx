@@ -1,9 +1,17 @@
 import React from "react";
 import "./Education.css";
+import { motion } from "framer-motion";
 
 const Education = () => {
   return (
-    <section id="education" className="education section">
+    <motion.section 
+      id="education" 
+      className="education section"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.8 }}
+    >
       <div className="container">
         <h2 className="section__title">Educação</h2>
 
@@ -13,7 +21,7 @@ const Education = () => {
           <p className="edu__date">2023 – 2026 (matutino)</p>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

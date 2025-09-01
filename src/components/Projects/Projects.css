@@ -11,8 +11,8 @@
 }
 
 .project__card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(0, 240, 160, 0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 240, 160, 0.2); /* Efeito de brilho neon */
 }
 
 .project__title {

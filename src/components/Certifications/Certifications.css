@@ -1,7 +1,13 @@
 .certs__list {
   list-style: disc;
   padding-left: 20px;
-  margin-top: 20px;
+  /* Remova a margem superior, pois o card já fornece espaçamento */
+  margin-top: 0; 
   color: var(--muted);
   line-height: 1.6;
+}
+
+/* Opcional: Garante que o texto da lista fique alinhado à esquerda dentro do card */
+.card .certs__list {
+  text-align: left;
 }

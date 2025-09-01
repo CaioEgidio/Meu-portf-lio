@@ -13,7 +13,6 @@ import Footer from "./components/Footer/Footer";
 const App = () => {
   return (
     <>
-      
       <Navbar />
       <main>
         <Hero />
