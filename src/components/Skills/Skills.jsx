@@ -3,24 +3,24 @@ import "./Skills.css";
 import { FaCode, FaDatabase, FaTools, FaLaptopCode, FaUsers, FaHandshake } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-// 1. Definir as "variantes" da animação para o container e para os itens
+// As variantes de animação permanecem as mesmas
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2, // Adiciona um atraso de 0.2s entre cada card
+      staggerChildren: 0.2,
     },
   },
 };
 
 const itemVariants = {
-  hidden: { y: 20, opacity: 0 }, // Começa 20px abaixo e invisível
+  hidden: { y: 20, opacity: 0 },
   visible: {
     y: 0,
-    opacity: 1, // Move para a posição original e fica visível
+    opacity: 1,
     transition: {
-      duration: 0.6, // Duração da animação de cada card
+      duration: 0.6,
     },
   },
 };
@@ -31,17 +31,16 @@ const Skills = () => {
       <div className="container">
         <h2 className="section__title">Habilidades</h2>
 
-        {/* 2. Aplicar as variantes ao container dos cards */}
-        <motion.div 
+        <motion.div
           className="skills__grid"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          {/* 3. Aplicar a variante de item a cada card individualmente */}
+          {/* O tamanho do ícone foi aumentado para 1.5em */}
           <motion.div className="skills__group" variants={itemVariants}>
-            <h3><FaCode style={{ marginRight: '8px' }} /> Linguagens</h3>
+            <h3><FaCode size="1.5em" /> Linguagens</h3>
             <ul>
               <li>Python</li>
               <li>JavaScript</li>
@@ -51,7 +50,7 @@ const Skills = () => {
           </motion.div>
 
           <motion.div className="skills__group" variants={itemVariants}>
-            <h3><FaLaptopCode style={{ marginRight: '8px' }} /> Web Development</h3>
+            <h3><FaLaptopCode size="1.5em" /> Web Development</h3>
             <ul>
               <li>HTML, CSS</li>
               <li>Node.js</li>
@@ -60,7 +59,7 @@ const Skills = () => {
           </motion.div>
 
           <motion.div className="skills__group" variants={itemVariants}>
-            <h3><FaDatabase style={{ marginRight: '8px' }} /> Banco de Dados</h3>
+            <h3><FaDatabase size="1.5em" /> Banco de Dados</h3>
             <ul>
               <li>MySQL</li>
               <li>SQL Server (básico)</li>
@@ -68,7 +67,7 @@ const Skills = () => {
           </motion.div>
 
           <motion.div className="skills__group" variants={itemVariants}>
-            <h3><FaTools style={{ marginRight: '8px' }} /> Ferramentas</h3>
+            <h3><FaTools size="1.5em" /> Ferramentas</h3>
             <ul>
               <li>Git/GitHub</li>
               <li>Linux</li>
@@ -77,7 +76,7 @@ const Skills = () => {
           </motion.div>
 
           <motion.div className="skills__group" variants={itemVariants}>
-            <h3><FaUsers style={{ marginRight: '8px' }} /> Metodologias</h3>
+            <h3><FaUsers size="1.5em" /> Metodologias</h3>
             <ul>
               <li>Agile</li>
               <li>Scrum (básico)</li>
@@ -85,7 +84,7 @@ const Skills = () => {
           </motion.div>
 
           <motion.div className="skills__group" variants={itemVariants}>
-            <h3><FaHandshake style={{ marginRight: '8px' }} /> Soft Skills</h3>
+            <h3><FaHandshake size="1.5em" /> Soft Skills</h3>
             <ul>
               <li>Resolução de problemas</li>
               <li>Trabalho em equipe</li>

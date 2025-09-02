@@ -1,10 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import "./Hero.css";
 import avatar from "../../assets/avatar.jpg";
-// 1. Importe 'motion' e 'animate' da framer-motion
 import { motion, animate } from "framer-motion";
 
-// 2. Crie um componente para o contador animado
 const Counter = ({ from, to }) => {
   const nodeRef = useRef();
 
@@ -12,52 +10,99 @@ const Counter = ({ from, to }) => {
     const node = nodeRef.current;
 
     const controls = animate(from, to, {
-      duration: 2, // Duração da animação em segundos
+      duration: 2,
       onUpdate(value) {
-        // Arredonda o valor e atualiza o texto
         node.textContent = Math.round(value);
       }
     });
 
-    // Limpa a animação quando o componente é desmontado
     return () => controls.stop();
   }, [from, to]);
 
-  // O 'ref' conecta a lógica da animação a este elemento span
   return <span ref={nodeRef} />;
 };
 
-
 const Hero = () => {
+  const text1Ref = useRef(null);
+  const text2Ref = useRef(null);
+  const cursorRef = useRef(null);
+
+  useEffect(() => {
+    // Array para armazenar os IDs dos timeouts
+    const timeoutIds = [];
+    
+    // Reseta o texto no início para lidar com o StrictMode do React
+    if (text1Ref.current) text1Ref.current.textContent = "";
+    if (text2Ref.current) text2Ref.current.textContent = "";
+    if (cursorRef.current) cursorRef.current.style.display = 'inline';
+
+
+    const text1 = "Olá, sou ";
+    const text2 = "Caio Egidio";
+    let i = 0;
+    let j = 0;
+
+    const typeText1 = () => {
+      if (i < text1.length) {
+        if (text1Ref.current) text1Ref.current.textContent += text1.charAt(i);
+        i++;
+        const id = setTimeout(typeText1, 100);
+        timeoutIds.push(id);
+      } else {
+        const id = setTimeout(typeText2, 250);
+        timeoutIds.push(id);
+      }
+    };
+
+    const typeText2 = () => {
+      if (j < text2.length) {
+        if (text2Ref.current) text2Ref.current.textContent += text2.charAt(j);
+        j++;
+        const id = setTimeout(typeText2, 120);
+        timeoutIds.push(id);
+      } else {
+        if (cursorRef.current) {
+          cursorRef.current.style.display = 'none';
+        }
+      }
+    };
+
+    // Inicia a animação
+    typeText1();
+
+    // Função de limpeza: será executada quando o componente for desmontado
+    return () => {
+      timeoutIds.forEach(clearTimeout);
+    };
+  }, []); // O array vazio garante que o efeito rode apenas uma vez
+
   return (
     <section id="home" className="hero">
       <div className="container hero__grid">
-        <motion.div 
+        <motion.div
           className="hero__left"
-          // Animação de fade-in para o conteúdo da esquerda
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
           <p className="hero__role">Software Developer</p>
           <h1 className="hero__title">
-            Olá, sou <span className="hero__name">Caio Egidio</span>
+            <span ref={text1Ref}></span>
+            <span ref={text2Ref} className="hero__name"></span>
+            <span ref={cursorRef} className="typing-cursor">|</span>
           </h1>
           <p className="hero__desc">
-            Estudante de Ciência da Computação. Faço front-end com React e
-            também trabalho com Python, Node.js e análise de dados.
+            Estudante de Ciência da Computação. trabalho com Python, e Ciencia de dados.
           </p>
 
           <div className="hero__actions">
-            <a className="btn btn--primary" href="#projects">Ver projetos</a>
-            <a className="btn btn--outline" href="#contact">Contato</a>
+            <a className="btn btn--primary" href="/curriculo.pdf" download="Curriculo-Caio-Egidio.pdf">Download CV</a>
           </div>
 
           <ul className="hero__stats">
-            {/* 3. Use o componente Counter para cada estatística */}
             <li>
               <span className="stat__num">
-                <Counter from={0} to={6} /> 
+                <Counter from={0} to={6} />
               </span>
               <span className="stat__label">Semestres</span>
             </li>
@@ -76,9 +121,8 @@ const Hero = () => {
           </ul>
         </motion.div>
 
-        <motion.div 
+        <motion.div
             className="hero__right"
-            // Animação de fade-in para a imagem da direita
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}

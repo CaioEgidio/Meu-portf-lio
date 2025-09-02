@@ -30,20 +30,6 @@
   line-height: 1.5;
 }
 
-@media (max-width: 768px) {
-  .experience .card {
-    text-align: center;
-  }
-
-  .exp__list {
-    text-align: left; /* lista pode ficar à esquerda pra legibilidade */
-    margin: 0 auto;
-    max-width: 80%;
-  }
-}
-
-/* Adicione isso ao final do seu Experience.css */
-
 .experience__timeline {
   position: relative;
   max-width: 800px;
@@ -95,4 +81,36 @@
 
 .timeline__item:nth-child(even)::after {
   left: -8px;
+}
+
+/* Media Query para responsividade */
+@media (max-width: 768px) {
+  .experience .card {
+    text-align: left; /* Alinha o texto à esquerda para melhor leitura */
+  }
+
+  .exp__list {
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .experience__timeline::before {
+    /* Esconde a linha central da timeline */
+    display: none;
+  }
+
+  .timeline__item,
+  .timeline__item:nth-child(even) {
+    /* Itens ocupam 100% da largura */
+    width: 100%;
+    left: 0;
+    padding-left: 30px; /* Adiciona um espaçamento à esquerda */
+    padding-right: 0;
+  }
+
+  .timeline__item::after,
+  .timeline__item:nth-child(even)::after {
+    /* Posiciona o ponto da timeline à esquerda */
+    left: 0;
+  }
 }

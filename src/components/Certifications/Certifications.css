@@ -1,13 +1,37 @@
+/* Container da lista de certificações */
 .certs__list {
-  list-style: disc;
-  padding-left: 20px;
-  /* Remova a margem superior, pois o card já fornece espaçamento */
-  margin-top: 0; 
-  color: var(--muted);
-  line-height: 1.6;
+  list-style: none; /* Remove os pontos da lista */
+  padding: 0;
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Espaçamento entre os cards */
+  max-width: 700px; /* Limita a largura da lista */
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Opcional: Garante que o texto da lista fique alinhado à esquerda dentro do card */
-.card .certs__list {
-  text-align: left;
+/* Estilo de cada item/card de certificação */
+.cert__item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--surface);
+  padding: 16px 20px;
+  border-radius: var(--radius);
+  border: 1px solid transparent; /* Borda invisível para transição suave */
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  color: var(--muted);
+}
+
+.cert__item:hover {
+  transform: translateX(10px); /* Move o card para a direita no hover */
+  border-color: var(--accent); /* Mostra a borda neon */
+}
+
+/* Estilo do ícone */
+.cert__icon {
+  color: var(--accent);
+  font-size: 1.4rem;
+  flex-shrink: 0;
 }
