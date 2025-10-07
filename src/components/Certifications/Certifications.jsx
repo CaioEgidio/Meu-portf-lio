@@ -8,7 +8,7 @@ const certificationsList = [
   "Alura – Imersão Python: Do Excel à Análise de Dados",
   "Alura – Imersão em Inteligência Artificial (2ª edição)",
   "Rocketseat – NLW IA",
-  "Fisk – Inglês (leitura e escrita básica)",
+  "Inglês (Nivel basico)",
 ];
 
 // Variantes para a animação escalonada (stagger)

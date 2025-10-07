@@ -92,11 +92,11 @@ const Hero = () => {
             <span ref={cursorRef} className="typing-cursor">|</span>
           </h1>
           <p className="hero__desc">
-            Estudante de Ciência da Computação. trabalho com Python, e Ciencia de dados.
+            Desenvolvedor Back-end em Python e estudante de Ciência da Computação.
           </p>
 
           <div className="hero__actions">
-            <a className="btn btn--primary" href="/curriculo.pdf" download="Curriculo-Caio-Egidio.pdf">Download CV</a>
+            <a className="btn btn--primary" href="/assets/Novo_CV_ATS (1).pdf" download="Novo_CV_ATS (1).pdf">Download CV</a>
           </div>
 
           <ul className="hero__stats">
@@ -110,7 +110,7 @@ const Hero = () => {
               <span className="stat__num">
                 <Counter from={0} to={1} />
               </span>
-              <span className="stat__label">Estágio</span>
+              <span className="stat__label">Experiências</span>
             </li>
             <li>
               <span className="stat__num">

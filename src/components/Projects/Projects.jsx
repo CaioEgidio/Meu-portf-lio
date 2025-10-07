@@ -7,7 +7,7 @@ const projects = [
     id: 1,
     title: "Shorts-Summary",
     description:
-      "Aplicação web que gera resumos automáticos de vídeos curtos do YouTube.",
+      "Projeto de aplicação web do curdo NLW IA da Rocketseat, que gera resumos automáticos de vídeos curtos do YouTube.",
     tech: "Node.js, HTML, CSS, JavaScript",
     link: "https://github.com/CaioEgidio/Shorts-Summary",
   },
