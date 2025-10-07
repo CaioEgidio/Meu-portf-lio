@@ -17,11 +17,10 @@ const About = () => {
       <div className="container">
         <h2 className="section__title">Sobre Mim</h2>
         <p className="about__text">
-          Estudante de Ciência da Computação (6º período) com interesse em
-          desenvolvimento Back and, ciência de dados e inteligência
-          artificial. Busco estágio para aplicar conhecimentos em Python, SQL,
-          Node.js, Git e análise de dados, contribuindo com soluções
-          tecnológicas inovadoras e evoluindo em ambientes ágeis.
+         Desenvolvedor e estudante do 6º período de Ciência da Computação com grande interesse em 
+         desenvolvimento Back-end, Ciência de Dados e Inteligência Artificial. 
+         Busco uma oportunidade de estágio para aplicar meus conhecimentos, contribuindo para
+         o desenvolvimento de soluções tecnológicas inovadoras e evoluindo em um ambiente dinâmico e colaborativo.
         </p>
       </div>
     </motion.section>

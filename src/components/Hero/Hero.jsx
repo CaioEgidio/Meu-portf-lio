@@ -3,6 +3,7 @@ import "./Hero.css";
 import avatar from "../../assets/avatar.jpg";
 import { motion, animate } from "framer-motion";
 
+
 const Counter = ({ from, to }) => {
   const nodeRef = useRef();
 
@@ -96,7 +97,7 @@ const Hero = () => {
           </p>
 
           <div className="hero__actions">
-            <a className="btn btn--primary" href="/assets/Novo_CV_ATS (1).pdf" download="Novo_CV_ATS (1).pdf">Download CV</a>
+             <a className="btn btn--primary" href="/curriculo.pdf" download="Curriculo_Caio_Egidio.pdf">Download CV</a>
           </div>
 
           <ul className="hero__stats">
